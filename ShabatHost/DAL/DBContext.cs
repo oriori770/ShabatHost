@@ -97,6 +97,7 @@ namespace ShabatHost.DAL
         /// Executes a SQL command and returns the first column of the first row in the result set returned by the query.
         /// Additional columns or rows are ignored.
         /// </summary>
+        /// 
         /// <param name="query">The SQL query to execute.</param>
         /// <param name="parameters">SQL parameters to avoid SQL injection.</param>
         /// <returns>The value of the first column of the first row in the result set.</returns>

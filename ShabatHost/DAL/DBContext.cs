@@ -64,6 +64,7 @@ namespace ShabatHost.DAL
 
         public DataTable ExecuteQuery(string queryStr, SqlParameter[] parameters)
         {
+
             DataTable output = new DataTable();
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -71,7 +72,6 @@ namespace ShabatHost.DAL
                 {
                     if (parameters != null)
                         cmd.Parameters.AddRange(parameters);
-
                     try
                     {
                         conn.Open();
@@ -86,6 +86,10 @@ namespace ShabatHost.DAL
                     }
                 }
             }
+            //MessageBox.Show(queryStr);
+
+            //MessageBox.Show(output.Rows.Count.ToString());
+
             return output;
         }
 

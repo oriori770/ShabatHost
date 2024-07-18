@@ -30,9 +30,9 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            textBoxInsert = new TextBox();
             buttonInsert = new Button();
-            listView1 = new ListView();
+            listBoxCategories = new ListBox();
             SuspendLayout();
             // 
             // label1
@@ -53,12 +53,12 @@
             label2.TabIndex = 1;
             label2.Text = "Insert categories page";
             // 
-            // textBox1
+            // textBoxInsert
             // 
-            textBox1.Location = new Point(204, 277);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(470, 47);
-            textBox1.TabIndex = 2;
+            textBoxInsert.Location = new Point(204, 277);
+            textBoxInsert.Name = "textBoxInsert";
+            textBoxInsert.Size = new Size(470, 47);
+            textBoxInsert.TabIndex = 2;
             // 
             // buttonInsert
             // 
@@ -68,26 +68,28 @@
             buttonInsert.TabIndex = 3;
             buttonInsert.Text = "insert";
             buttonInsert.UseVisualStyleBackColor = true;
+            buttonInsert.Click += buttonInsert_Click;
             // 
-            // listView1
+            // listBoxCategories
             // 
-            listView1.Location = new Point(257, 538);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(329, 401);
-            listView1.TabIndex = 4;
-            listView1.UseCompatibleStateImageBehavior = false;
+            listBoxCategories.FormattingEnabled = true;
+            listBoxCategories.ItemHeight = 41;
+            listBoxCategories.Location = new Point(246, 525);
+            listBoxCategories.Name = "listBoxCategories";
+            listBoxCategories.Size = new Size(365, 209);
+            listBoxCategories.TabIndex = 5;
             // 
-            // ShabatHost
+            // ShabatHostForm
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(897, 1056);
-            Controls.Add(listView1);
+            Controls.Add(listBoxCategories);
             Controls.Add(buttonInsert);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxInsert);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "ShabatHost";
+            Name = "ShabatHostForm";
             Text = "ShabatHost";
             ResumeLayout(false);
             PerformLayout();
@@ -97,8 +99,8 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox textBoxInsert;
         private Button buttonInsert;
-        private ListView listView1;
+        private ListBox listBoxCategories;
     }
 }

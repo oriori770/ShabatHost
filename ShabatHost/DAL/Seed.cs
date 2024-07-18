@@ -79,7 +79,7 @@ namespace ShabatHost.DAL
         END CATCH
         SELECT @TableCreated AS IsCreated;";
             _dbContext.ExecuteNonQuery(sqlScript, null);
-            DataTable result = _dbContext.ExecuteQuery("SELECT COUNT(*) as test FROM FoodCategories;", null);
+            DataTable result = _dbContext.ExecuteQuery("SELECT COUNT(*) as test FROM Categories;", null);
             if (result.Rows.Count <= 0)
             {
                 throw new Exception("Shabat Seed failed...");
